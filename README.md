@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TrustTask — AI-Powered Freelancer Marketplace
 Clear projects. Trusted partnerships.
 
@@ -29,3 +30,42 @@ Client: Approve milestones and pay with PayPal sandbox.
 - Secrets only in server/.env (git-ignored). Never commit .env.
 - Payment amount is computed on the server; the server captures and verifies the PayPal order before marking a project paid.
 - Passwords are hashed with bcrypt; routes are protected by JWT and role checks.
+=======
+# TrustTask
+
+TrustTask is an AI-powered freelancer marketplace that eliminates the friction of writing project briefs and secures payments through PayPal.
+
+Built for the PayPal Hackathon.
+
+## The Problem
+Clients often struggle to write detailed project briefs. This leads to scope creep, misaligned expectations, and unpaid work for freelancers.
+
+## The Solution
+TrustTask uses AI (Groq/LLaMA 3) to interview the client in a chat interface. Once the AI has enough details, it automatically generates a structured project brief with deliverables and milestone pricing. The client can then fund the project securely using the PayPal Sandbox API.
+
+## Tech Stack
+- Frontend: React, Vite, React Router, CSS
+- Backend: Node.js, Express.js
+- Database: MongoDB Atlas (Mongoose)
+- AI Integration: Groq API (LLaMA 3.3 70B)
+- Payments: PayPal REST API (Sandbox)
+
+## Key Features
+1. AI Project Briefing: A conversational AI assistant asks targeted questions to build a comprehensive project scope.
+2. Milestone Generation: The AI automatically breaks the project down into deliverable milestones with suggested USD amounts.
+3. Role-Based Access: Separate dashboards for Clients (posting jobs) and Freelancers (finding work).
+4. PayPal Integration: Clients can securely fund the project via the PayPal Sandbox checkout flow.
+
+## Local Setup Instructions
+
+### Prerequisites
+- Node.js (v18 or higher)
+- A MongoDB Atlas account
+- A Groq API Key (Free)
+- A PayPal Developer Sandbox account
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/YourUsername/trusttask.git
+cd trusttask
+>>>>>>> cc8bf12923cab50413b590736fabfc79d635e7e0
