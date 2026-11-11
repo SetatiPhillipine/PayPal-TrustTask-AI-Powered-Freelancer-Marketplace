@@ -1,72 +1,37 @@
+# TrustTask
 
-# TrustTask — AI-Powered Freelancer Marketplace
+TrustTask is an AI-powered freelancer marketplace that eliminates the friction of writing project briefs and secures payments through PayPal.
 
-**Clear projects. Trusted partnerships.**
-
-TrustTask is an AI-powered freelancer marketplace designed to help clients and freelancers collaborate with clearer requirements, structured milestones, and transparent payment tracking.
-
-The platform uses AI to turn client requests into organised project briefs, suggest milestones and deliverables, and support a more structured freelance workflow. PayPal integration will provide a payment option for clients using the platform.
+Built for the PayPal Hackathon.
 
 ## The Problem
+Clients often struggle to write detailed project briefs. This leads to scope creep, misaligned expectations, and unpaid work for freelancers.
 
-Freelancers and clients can struggle to agree on project requirements, pricing, deadlines, and deliverables. Misunderstandings can lead to delays, disagreements, and uncertainty about project progress.
+## The Solution
+TrustTask uses AI (Groq/LLaMA 3) to interview the client in a chat interface. Once the AI has enough details, it automatically generates a structured project brief with deliverables and milestone pricing. The client can then fund the project securely using the PayPal Sandbox API.
 
-## Our Solution
-
-TrustTask aims to make freelance collaboration more organised by helping users:
-
-- Generate structured project briefs using AI.
-- Suggest project milestones and deliverables.
-- Organise projects and track progress.
-- Manage client and freelancer accounts.
-- Initiate and verify payments through PayPal's sandbox environment.
+## Tech Stack
+- Frontend: React, Vite, React Router, CSS
+- Backend: Node.js, Express.js
+- Database: MongoDB Atlas (Mongoose)
+- AI Integration: Groq API (LLaMA 3.3 70B)
+- Payments: PayPal REST API (Sandbox)
 
 ## Key Features
+1. AI Project Briefing: A conversational AI assistant asks targeted questions to build a comprehensive project scope.
+2. Milestone Generation: The AI automatically breaks the project down into deliverable milestones with suggested USD amounts.
+3. Role-Based Access: Separate dashboards for Clients (posting jobs) and Freelancers (finding work).
+4. PayPal Integration: Clients can securely fund the project via the PayPal Sandbox checkout flow.
 
-- **AI Project Planning:** Transform client descriptions into structured project briefs.
-- **Milestone Management:** Break projects into manageable stages.
-- **Progress Tracking:** Monitor milestone status and deliverables.
-- **Client and Freelancer Accounts:** Support different user roles and workflows.
-- **PayPal Integration:** Enable checkout through PayPal APIs.
-- **Project Dashboard:** Keep project information and progress organised.
+## Local Setup Instructions
 
-*Features will be updated as development progresses.*
+### Prerequisites
+- Node.js (v18 or higher)
+- A MongoDB Atlas account
+- A Groq API Key (Free)
+- A PayPal Developer Sandbox account
 
-## Technology Stack
-
-- **Frontend:** React
-- **Backend:** Node.js and Express
-- **Database:** MongoDB
-- **AI:** Large language model API
-- **Payments:** PayPal REST API
-- **Authentication:** Secure backend-managed sessions or JWT
-
-## How It Works
-
-1. A client describes the project they need completed.
-2. The backend sends the description to an AI service.
-3. The AI generates a structured brief and suggested milestones.
-4. Project information is stored in MongoDB.
-5. Clients and freelancers manage projects and track progress.
-6. Clients can proceed to PayPal checkout in the sandbox environment.
-7. The backend verifies payment status before updating payment records.
-
-## Security
-
-- Keep API keys and credentials in backend environment variables.
-- Protect accounts and project data with authentication and authorisation.
-- Verify payment status on the backend.
-- Use PayPal's sandbox environment for development and testing.
-- Never commit private `.env` files or API secrets.
-
-## Project Status
-
-TrustTask is being developed as a hackathon project. The initial goal is to build a functional MVP featuring AI-assisted project planning, user accounts, milestone tracking, and PayPal sandbox payments.
-
-## Vision
-
-Our vision is to help freelancers and clients turn ideas into clearly defined projects, build trust through transparent collaboration, and manage work more confidently from planning to payment.
-
-## Built With
-
-React, Node.js, Express, MongoDB, an AI API, and PayPal REST APIs.
+### 1. Clone the Repository
+```bash
+git clone https://github.com/YourUsername/trusttask.git
+cd trusttask
