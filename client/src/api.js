@@ -1,7 +1,8 @@
-const API_URL = 'http://127.0.0.1:5000/api';
+const API_URL = import.meta.env.VITE_API_URL 
+  ? `${import.meta.env.VITE_API_URL}/api` 
+  : 'http://127.0.0.1:5000/api';
 
 export async function api(endpoint, { method = 'GET', body } = {}) {
-  // CHANGED 'token' to 'tt_token' HERE
   const token = localStorage.getItem('tt_token'); 
   
   const headers = {
